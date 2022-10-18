@@ -10,5 +10,8 @@ public class CityValidator extends Validator {
         if(person.getCity().equals("Amsterdam")) {
             throw new RuntimeException("Such a busy city..uff!!");
         }
+        if(getNextValidator() != null) {
+            getNextValidator().validate(person);
+        }
     }
 }

@@ -21,6 +21,6 @@ public class PersonValidator {
     }
 
     public void validatePerson(Person person) {
-       this.nameValidator.executeValidations(person);
+       this.nameValidator.validate(person);
     }
 }

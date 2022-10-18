@@ -11,11 +11,8 @@ public abstract class Validator {
         return this.nextValidator;
     }
 
-    public void executeValidations(Person person) {
-        validate(person);
-        if(this.nextValidator != null) {
-            this.nextValidator.executeValidations(person);
-        }
+    public Validator getNextValidator() {
+        return nextValidator;
     }
 
     public abstract void validate(Person person);

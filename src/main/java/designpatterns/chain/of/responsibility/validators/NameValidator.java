@@ -10,5 +10,8 @@ public class NameValidator extends Validator {
         if(person.getName().equals("Soham")) {
             throw new RuntimeException("we cannot allow this guy");
         }
+        if(getNextValidator() != null) {
+            getNextValidator().validate(person);
+        }
     }
 }
